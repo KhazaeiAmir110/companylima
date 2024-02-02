@@ -17,13 +17,12 @@ json.dumps(object) => output json object as string
 string = """{\"name\": \"amir\", \"email\": \"<EMAIL>\", \"age\":30}"""
 
 # convert x in dic
-js = json.loads(string)
+# loads : string to dict
+string_to_json = json.loads(string)
 
-print(js) # dict all
-
-print(js['name']) # value name
-
-print(type(js))
+print(string_to_json) # dict all
+print(string_to_json['name']) # value name
+print(type(string_to_json))
 
 
 dictionary = {
@@ -36,12 +35,15 @@ dictionary = {
 }
 
 # convert x in string
-js_2 = json.dumps(dictionary)
+# dict to string
+dict_to_json = json.dumps(dictionary)
 
-print(js_2)
-print(type(js_2)) # string
+print(dict_to_json)
+print(type(dict_to_json)) # string
 
 # -------------------------------------------
+# dumps
+
 # list
 print(json.dumps([1,2,3]))
 # None
